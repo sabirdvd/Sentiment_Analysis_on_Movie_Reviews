@@ -16,7 +16,7 @@ np.random.seed(0)
 
 if __name__ == "__main__":
 
-    #load data
+    #load data from file 
     train_df = pd.read_csv('train.tsv', sep='\t', header=0)
     test_df = pd.read_csv('test.tsv', sep='\t', header=0)
 
