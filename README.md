@@ -3,7 +3,7 @@ Sentiment Analysis on Movie Reviews
 
 #Dependencies 
 python 2.7
-%numpy
+numpy
 gensim 
 nltk 
 panda 
