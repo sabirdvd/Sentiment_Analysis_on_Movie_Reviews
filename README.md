@@ -7,4 +7,4 @@ numpy
 gensim 
 nltk 
 panda 
-karas 
+keras
