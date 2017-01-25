@@ -1,2 +1,10 @@
-# Sentiment_Analysis_on_Movie_Reviews
-Sentiment_Analysis_on_Movie_Reviews
+# Sentiment Analysis with LSTM 
+Sentiment Analysis on Movie Reviews
+
+Dependencies 
+python 2.7
+numpy
+gensim 
+nltk 
+panda 
+karas 
