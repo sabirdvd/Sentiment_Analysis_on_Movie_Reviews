@@ -112,9 +112,3 @@ if __name__ == "__main__":
     plt.legend(['train', 'test'], loc='upper left')
     plt.show()
 
-
-
-    #make a submission
-    test_df['Sentiment'] = test_pred.reshape(-1,1)
-    header = ['PhraseId', 'Sentiment']
-    test_df.to_csv('./lstm_sentiment.csv', columns=header, index=False, header=True)
