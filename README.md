@@ -8,4 +8,4 @@ gensim
 nltk 
 panda 
 keras
-PhasedLSTM pakage for plstm.py
+PhasedLSTM for plstm.py
