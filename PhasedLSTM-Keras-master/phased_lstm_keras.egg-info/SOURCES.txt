@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+phased_lstm_keras/PhasedLSTM.py
+phased_lstm_keras/__init__.py
+phased_lstm_keras.egg-info/PKG-INFO
+phased_lstm_keras.egg-info/SOURCES.txt
+phased_lstm_keras.egg-info/dependency_links.txt
+phased_lstm_keras.egg-info/requires.txt
+phased_lstm_keras.egg-info/top_level.txt
