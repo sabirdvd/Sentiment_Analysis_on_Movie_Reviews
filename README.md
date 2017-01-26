@@ -1,4 +1,4 @@
-# Sentiment Analysis with LSTM 
+# Sentiment Analysis with RNN
 Sentiment Analysis on Movie Reviews
 
 #Dependencies 
@@ -8,3 +8,4 @@ gensim
 nltk 
 panda 
 keras
+PhasedLSTM pakage for plstm.py
