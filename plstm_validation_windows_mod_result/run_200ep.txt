@@ -1,0 +1,2 @@
+ LSTM loss: 0.2686 - acc: 0.8347 - val_loss: 2.3071 - val_acc: 0.5334
+ PLSTM
