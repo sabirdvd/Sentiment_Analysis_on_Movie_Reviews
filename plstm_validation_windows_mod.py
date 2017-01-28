@@ -13,7 +13,6 @@ from keras.models import Sequential
 from keras.preprocessing import sequence
 from keras.callbacks import Callback
 from keras.utils import np_utils
-from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation, Embedding
 from keras.layers import LSTM
 from phased_lstm_keras.PhasedLSTM import PhasedLSTM as PLSTM
