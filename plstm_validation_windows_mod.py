@@ -38,7 +38,7 @@ class LossHistory(Callback):
 #read arguments from command line
 if __name__ == "__main__":
     #set default values
-    nb_epoch = 1
+    nb_epoch = 200
     # TODO Update
     DROPOUT = 0
     dryRun = False
