@@ -130,13 +130,11 @@ if __name__ == "__main__":
     optimizer = adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0.0)
     model_PLSTM.compile(loss='categorical_crossentropy', optimizer= optimizer, metrics=['accuracy'])
 
-
     #model_PLSTM.compile(optimizer='rmsprop', loss='categorical_crossentropy',
                         #metrics=['accuracy'])
     #Early stopping 
     #early_stopping = EarlyStopping(monitor='val_loss', patience=2)
     #model_PLSTM.fit(word_id_train, y_train_enc, validation_split=0.2, callbacks=[early_stopping])
-
 
     model_PLSTM.summary()
     acc_PLSTM = AccHistory()
@@ -148,22 +146,14 @@ if __name__ == "__main__":
     shuffle=True, verbose=1, validation_split=0.25,
     callbacks=[acc_PLSTM, loss_PLSTM])
 
-    #history_plstm=model_PLSTM.fit(x=word_id_train, y=y_train_enc,
-    #nb_epoch=nb_epoch, batch_size=128, 
-    #shuffle=True, verbose=1, validation_split=0.25,
-    #callbacks=[early_stopping])
-    
     ##save results to text file
     fileName="PLSTM_accuracy_and_loss_epochs_"+str(nb_epoch)+"_drop_out_"+str(DROPOUT)+".txt"
     index = range(1,1+len(np.asarray(loss_PLSTM.losses)))
-    print index
     columns = ['accuracy_PLSTM','loss_PLSTM']
-    print columns
     df = pd.DataFrame(
     {'accuracy_PLSTM': np.asarray(acc_PLSTM.losses),
     'loss_PLSTM': np.asarray(loss_PLSTM.losses)},
     index=index, columns=columns)
-    print df
     df.to_csv(fileName, sep=';')
 
     # summarize history for accuracy
@@ -200,13 +190,6 @@ if __name__ == "__main__":
     optimizer = adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0.0)
     model_LSTM.compile(loss='categorical_crossentropy', optimizer= optimizer, metrics=['accuracy'])
     
-    #def mode 
-    #model_LSTM.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-
-    #Early stopping 
-    #early_stopping = EarlyStopping(monitor='val_loss', patience=2)
-    #model_LSTM.fit(word_id_train, y_train_enc, validation_split=0.25, callbacks=[early_stopping])
-
     model_LSTM.summary()
     acc_LSTM = AccHistory()
     loss_LSTM = LossHistory()
@@ -215,29 +198,7 @@ if __name__ == "__main__":
     nb_epoch=nb_epoch, batch_size=128, 
     shuffle=True, verbose=1, validation_split=0.25,
     callbacks=[acc_LSTM, loss_LSTM])
-   
-    ##Early stopping run 
-    #history_lstm=model_LSTM.fit(x=word_id_train, y=y_train_enc,
-    #nb_epoch=nb_epoch, batch_size=128, 
-    #shuffle=True, verbose=1, validation_split=0.25,
-    #callbacks=[early_stopping])
-
-    #save results to text file
-    #fileName="both_models_accuracy_and_loss_epochs_"+str(nb_epoch)+"_drop_out_"+str(DROPOUT)+".txt"
-    #index = range(1,1+len(np.asarray(loss_PLSTM.losses)))
-    #print index
-    #columns = ['accuracy_PLSTM','loss_PLSTM','accuracy_LSTM','loss_LSTM']
-    #print columns
-    #df = pd.DataFrame(
-    #{'accuracy_PLSTM': np.asarray(acc_PLSTM.losses),
-    #'loss_PLSTM': np.asarray(loss_PLSTM.losses),
-    #'accuracy_LSTM': np.asarray(acc_LSTM.losses),
-    #'loss_LSTM': np.asarray(loss_LSTM.losses)    
-    #},
-    #index=index, columns=columns)
-    #print df
-    #df.to_csv(fileName, sep=';')
-        
+       
     # summarize history for accuracy
     plt.figure(3, figsize=(10, 10))
     plt.plot(history_lstm.history['acc'])
