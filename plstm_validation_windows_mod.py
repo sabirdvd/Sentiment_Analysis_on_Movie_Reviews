@@ -38,7 +38,7 @@ class LossHistory(Callback):
 #read arguments from command line
 if __name__ == "__main__":
     #set default values
-    nb_epoch = 200
+    nb_epoch = 1
     # TODO Update
     DROPOUT = 0
     dryRun = False
@@ -222,9 +222,39 @@ if __name__ == "__main__":
     figName = "LSTM_loss_train_vs_validation"+str(DROPOUT)+".svg"
     plt.savefig(figName, dpi=200)
     plt.clf() 
-       
-    # plot results for training dataset
+    
+    
+    # summarize history for accuracy combining both models
     plt.figure(5, figsize=(10, 10))
+    plt.plot(history_lstm.history['acc'])
+    plt.plot(history_lstm.history['val_acc'])
+    plt.plot(history_plstm.history['acc'])
+    plt.plot(history_plstm.history['val_acc'])
+    plt.title('Model accuracy')
+    plt.ylabel('accuracy')
+    plt.xlabel('epoch')
+    plt.legend(['LSTM train', 'LSTM validation','PLSTM train', 'PLSTM validation'], loc='upper left')
+    figName = "Both_models_accuracy_drop_out"+str(DROPOUT)+".svg"
+    plt.savefig(figName, dpi=200)
+    plt.clf()
+    
+    # summarize history for loss combining both models
+    plt.figure(6, figsize=(10, 10))
+    plt.plot(history_lstm.history['loss'])
+    plt.plot(history_lstm.history['val_loss'])
+    plt.plot(history_plstm.history['loss'])
+    plt.plot(history_plstm.history['val_loss'])
+    plt.title('model loss')
+    plt.ylabel('loss')
+    plt.xlabel('epoch')
+    plt.legend(['LSTM train', 'LSTM validation','PLSTM train', 'PLSTM validation'],
+    loc='upper left')
+    figName = "Both_models_loss_drop_out"+str(DROPOUT)+".svg"
+    plt.savefig(figName, dpi=200)
+    plt.clf()
+    
+    # plot results for training dataset
+    plt.figure(7, figsize=(10, 10))
     plt.title('Accuracy on validation set')
     plt.xlabel('Iterations, batch size ' + str(batch_size))
     plt.ylabel('accuracy')
@@ -236,7 +266,7 @@ if __name__ == "__main__":
     plt.savefig(figName, dpi=200)
     plt.clf()  
       
-    plt.figure(6, figsize=(10, 10))
+    plt.figure(8, figsize=(10, 10))
     plt.title('Loss on validation set')
     plt.xlabel('Iterations, batch size ' + str(batch_size))
     plt.ylabel('Categorical cross-entropy')
