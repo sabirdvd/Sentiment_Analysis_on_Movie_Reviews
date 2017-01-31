@@ -9,8 +9,8 @@
 
 > Install ``PLSTM``
 ```
-     python.py setup bulid'
--   'python.py setup install'```   
+python setup.py bulid
+python setup.py install  
 ```
 > Start ``training``
 
