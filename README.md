@@ -13,7 +13,7 @@
 
 > Run
 
-After making the script plstm_validation.py executable it can be called with the following flags: ``./plstm_validation.py -d -e ``For more information type: ``./plstm_validation_demo.py -h``
+After making the script plstm_validation.py executable it can be called with the following flags: ``./plstm_validation_demo.py -d -e ``For more information type: ``./plstm_validation_demo.py -h``
 
 #Background Information
 
