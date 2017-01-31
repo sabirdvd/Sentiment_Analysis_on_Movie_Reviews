@@ -8,8 +8,8 @@
 - panda 
 
 > Install ``PLSTM``
-- ``'python.py setup bulid'
--   'python.py setup install'``   
+- ```'python.py setup bulid'
+-   'python.py setup install'```   
 
 > Start ``training``
 
