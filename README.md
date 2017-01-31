@@ -14,7 +14,7 @@ python setup.py install
 ```
 > Start ``training``
 
-After making the script plstm_validation.py executable it can be called with the following flags: ``./plstm_lstm_training.py -d -e ``For more information type: ``./plstm_lstm_training.py -h``
+After making the script ``plstm_lstm_training.py`` executable it can be called with the following flags: ``./plstm_lstm_training.py -d -e ``For more information type: ``./plstm_lstm_training.py -h``
 
 #Background Information
 
