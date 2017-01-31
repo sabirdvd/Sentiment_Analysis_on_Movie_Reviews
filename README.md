@@ -8,8 +8,8 @@
 - panda 
 
 > install Plstm
-``python.py setup bulid``
-``python.py setup install   
+- ``python.py setup bulid``
+- ``python.py setup install``   
 
 > How to run:
 
