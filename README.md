@@ -7,11 +7,11 @@
 - nltk 
 - panda 
 
-> install Plstm
+> Install PLSTM 
 - ``python.py setup bulid``
 - ``python.py setup install``   
 
-> How to run:
+> Run:
 
 After making the script plstm_validation.py executable it can be called with the following flags: ``./plstm_validation.py -d -e ``For more information type: ``./plstm_validation.py -h``
 
