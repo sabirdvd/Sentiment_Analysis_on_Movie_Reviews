@@ -1,5 +1,5 @@
 #Sentiment Analysis based on Movie Reviews using Recurrent Neural Networks (LSTM and PLSTM)
-#Dependencies
+> Dependencies
 
 - python 2.7 
 - keras 
@@ -26,11 +26,11 @@ Tokenize each row so that we only have tokens Remove all the stopwords Use a ste
 
 The preprocessed data is arrays of length 12. Each element corresponds to a token, with a number with the token-id or a zero (which means that there is no token there). In this way each sentence that is being classified is a vector consisting of tokens that each build a sentence. The zero-padding is from left to right, so that the vector contains the information in the end, which benefits the LSTM-/PLSTM-layers. The label for each vector is represented as a 5-element binary vector (one-hot encoding). The input training data consists of the following:
 
-· Dictionary: 13759 different tokens (both training and test) · There are 8544 sentences · There are 156060 sentences, phrases and single tokens · Labels for each of the types above
+- Dictionary: 13759 different tokens (both training and test) · There are 8544 sentences · There are 156060 sentences, phrases and single tokens · Labels for each of the types above
 
 The input test data consists of the following:
 
-· Dictionary: 13759 tokens (both training and test) · There are 3311 sentences · There are 66292 sentences, phrases and single tokens
+- Dictionary: 13759 tokens (both training and test) · There are 3311 sentences · There are 66292 sentences, phrases and single tokens
 
 Single tokens are classified with the label 2. The output data is the classified label.
 
