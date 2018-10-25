@@ -16,11 +16,11 @@ python setup.py install
 
 After making the script ``plstm_lstm_training.py`` executable it can be called with the following flags: ``./plstm_lstm_training.py -d -e ``For more information type: ``./plstm_lstm_training.py -h``
 
-#Background Information
+# Background Information
 
 Kaggle hosted a sentiment analysis competition in February of 2014 for the machine learning community to benchmark their ideas using the Rotten Tomatoes movie review dataset; which is a corpus of movie reviews. The goal was to label phrases on a scale of five values: negative, somewhat negative, neutral, somewhat positive, positive. Obstacles like sentence negation, sarcasm, terseness, language ambiguity, and many others make this task very challenging.
 
-#Challenge example:
+# Challenge example:
 
 Regardless of words like cleverness, intelligent, kind and humor are positives words, the phrase is still negative overall. That is why the order of words and the sentence structure must be taken into account to not loose information.
 Technical details
