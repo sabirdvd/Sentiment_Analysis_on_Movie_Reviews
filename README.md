@@ -1,4 +1,4 @@
-#Sentiment Analysis based on Movie Reviews using Recurrent Neural Networks (LSTM and PLSTM)
+# Sentiment Analysis based on Movie Reviews using Recurrent Neural Networks (LSTM and PLSTM)
 > Dependencies
 
 - python 2.7 
